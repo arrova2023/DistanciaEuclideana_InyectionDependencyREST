@@ -34,22 +34,23 @@ La clase `DistanceController` utiliza la anotación `@ExceptionHandler` para cap
 
 src/
 └── main/
-└── java/
-└── com/
-└── example/
-└── demo/
-├── controller/
-│ └── DistanceController.java
-├── service/
-│ ├── DistanceService.java
-│ └── EuclideanDistanceCalculator.java
-├── model/
-│ ├── Point.java
-│ ├── DistanceRequest.java
-│ └── DistanceResponse.java
-├── error/
-│ └── ApiError.java
-└── EuclideanDistanceSingletonApplication.java
+    └── java/
+        └── com/
+            └── example/
+                └── demo/
+                    ├── controller/
+                    │   └── DistanceController.java
+                    ├── service/
+                    │   ├── DistanceService.java
+                    │   └── EuclideanDistanceCalculator.java
+                    ├── model/
+                    │   ├── Point.java
+                    │   ├── DistanceRequest.java
+                    │   └── DistanceResponse.java
+                    ├── error/
+                    │   └── ApiError.java
+                    └── EuclideanDistanceSingletonApplication.java
+
 
 ## Cómo Probar con Postman
 
