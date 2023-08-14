@@ -2,6 +2,24 @@
 
 Este proyecto implementa un servicio RESTful en Spring Boot para calcular la distancia euclidiana entre dos puntos en un plano. Utiliza la inyección de dependencias y el manejo de errores para brindar una experiencia de usuario confiable y eficiente.
 
+La distancia euclidiana en dos dimensiones es una medida de la longitud entre dos puntos en un plano cartesiano. Imagina que tienes un plano con dos ejes perpendiculares: el eje horizontal (llamado eje "x") y el eje vertical (llamado eje "y"). Cada punto en este plano puede representarse mediante un par ordenado de coordenadas (x, y), donde "x" es la posición en el eje horizontal y "y" es la posición en el eje vertical.
+
+La fórmula para calcular la distancia euclidiana entre dos puntos P(x1, y1) y Q(x2, y2) en un plano cartesiano es la siguiente:
+
+distancia = √((x2 - x1)^2 + (y2 - y1)^2)
+
+Vamos a descomponer esta fórmula paso a paso:
+
+Resta de coordenadas: Primero, calculamos la diferencia entre las coordenadas "x" de los dos puntos (x2 - x1) y la diferencia entre las coordenadas "y" (y2 - y1).
+
+Elevación al cuadrado: Luego, elevamos al cuadrado estas diferencias. Esto asegura que las diferencias sean positivas, ya que un número negativo elevado al cuadrado se convierte en positivo.
+
+Suma de cuadrados: Sumamos las diferencias elevadas al cuadrado de las coordenadas "x" y "y".
+
+Raíz cuadrada: Finalmente, tomamos la raíz cuadrada de la suma de cuadrados. Esto nos da la longitud de la línea recta que conecta los dos puntos en el plano. Es la distancia euclidiana.
+
+En resumen, la distancia euclidiana en dos dimensiones mide la longitud de la línea recta entre dos puntos en un plano cartesiano. Es una medida de "distancia directa" que sigue el camino más corto entre los puntos. Se utiliza en diversos campos como matemáticas, física, análisis de datos y geometría para medir la separación entre puntos en un espacio bidimensional.
+
 ## Patrones de Diseño
 
 ### Inyección de Dependencias (Dependency Injection)

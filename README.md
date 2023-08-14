@@ -2,6 +2,28 @@
 
 This project implements a RESTful service in Spring Boot to calculate the Euclidean distance between two points on a plane. Use dependency injection and error handling to provide a reliable and efficient user experience.
 
+In mathematics, the Euclidean distance between two points in Euclidean space is the length of a line segment between the two points. It can be calculated from the Cartesian coordinates of the points using the Pythagorean theorem, therefore occasionally being called the Pythagorean distance. These names come from the ancient Greek mathematicians Euclid and Pythagoras, although Euclid did not represent distances as numbers, and the connection from the Pythagorean theorem to distance calculation was not made until the 18th century.
+
+The distance between two objects that are not points is usually defined to be the smallest distance among pairs of points from the two objects. Formulas are known for computing distances between different types of objects, such as the distance from a point to a line. In advanced mathematics, the concept of distance has been generalized to abstract metric spaces, and other distances than Euclidean have been studied. In some applications in statistics and optimization, the square of the Euclidean distance is used instead of the distance itself.
+
+The Euclidean distance in two dimensions is a measure of the length between two points on a Cartesian plane. Imagine you have a plane with two perpendicular axes: the horizontal axis (called the "x" axis) and the vertical axis (called the "y" axis). Each point in this plane can be represented by an ordered pair of coordinates (x, y), where "x" is the position on the horizontal axis and "y" is the position on the vertical axis.
+
+The formula to calculate the Euclidean distance between two points P(x1, y1) and Q(x2, y2) on a Cartesian plane is as follows:
+
+distance = √((x2 - x1)^2 + (y2 - y1)^2)
+
+Let's break down this formula step by step:
+
+Coordinate subtraction: First, we calculate the difference between the "x" coordinates of the two points (x2 - x1) and the difference between the "y" coordinates (y2 - y1).
+
+Squaring: We then square these differences. This ensures that the differences are positive, since a negative number squared becomes positive.
+
+Sum of squares: We add the differences raised to the square of the coordinates "x" and "y".
+
+Square root: Finally, we take the square root of the sum of squares. This gives us the length of the straight line connecting the two points in the plane. It is the Euclidean distance.
+
+In short, the Euclidean distance in two dimensions measures the length of a straight line between two points on a Cartesian plane. It is a "direct distance" measure that follows the shortest path between points. It is used in various fields such as mathematics, physics, data analysis, and geometry to measure the separation between points in two-dimensional space.
+
 ## Design patterns
 
 ### Dependency Injection
