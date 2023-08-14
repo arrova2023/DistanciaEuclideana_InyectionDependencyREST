@@ -1,76 +1,76 @@
-# Distancia Euclidiana RESTful API con Inyección de Dependencias
+# Euclidean Distance RESTful API with Dependency Injection
 
-Este proyecto implementa un servicio RESTful en Spring Boot para calcular la distancia euclidiana entre dos puntos en un plano. Utiliza la inyección de dependencias y el manejo de errores para brindar una experiencia de usuario confiable y eficiente.
+This project implements a RESTful service in Spring Boot to calculate the Euclidean distance between two points on a plane. Use dependency injection and error handling to provide a reliable and efficient user experience.
 
-## Patrones de Diseño
+## Design patterns
 
-### Inyección de Dependencias (Dependency Injection)
+### Dependency Injection
 
-Se utiliza el patrón de inyección de dependencias para lograr un bajo acoplamiento entre los componentes del sistema. Los diferentes componentes, como el controlador, el servicio y el calculador de distancia, se inyectan donde sea necesario.
+The dependency injection pattern is used to achieve low maintenance between system components. The different components, such as the controller, the service, and the distance calculator, are injected where needed.
 
-En la clase `DistanceController`, la dependencia de `DistanceService` se inyecta mediante la anotación `@Autowired`.
+In the `DistanceController` class, the `DistanceService` dependency is injected via the `@Autowired` annotation.
 
-En la clase `DistanceService`, la dependencia de `EuclideanDistanceCalculator` se inyecta mediante la anotación `@Autowired`.
+In the `DistanceService` class, the dependency on `EuclideanDistanceCalculator` is injected via the `@Autowired` annotation.
 
-### Patrón de Controlador (Controller Pattern)
+### Controller Pattern
 
-El patrón de controlador se aplica para manejar las solicitudes HTTP entrantes y dirigirlas al servicio correspondiente para su procesamiento. Esto mantiene una separación clara entre la capa de presentación y la lógica de negocio.
+The controller pattern is applied to handle incoming HTTP requests and direct them to the corresponding service for processing. This maintains a clear separation between the presentation layer and the business logic.
 
-La clase `DistanceController` actúa como el controlador en este patrón. Define rutas de solicitud, maneja las entradas y dirige las solicitudes al servicio adecuado.
+The `DistanceController` class acts as the controller in this pattern. Define request routes, handle inputs, and direct requests to the appropriate service.
 
-### Patrón de Servicio (Service Pattern)
+### Service Pattern
 
-El patrón de servicio se utiliza para encapsular la lógica de negocio y proporcionar una interfaz coherente para interactuar con dicha lógica. Los servicios actúan como intermediarios entre el controlador y otras capas del sistema.
+The service pattern is used to encapsulate business logic and provide a consistent interface for interacting with that logic. The services act as intermediaries between the controller and other layers of the system.
 
-En la clase `DistanceService`, se implementa el patrón de servicio. Contiene la lógica para calcular la distancia euclidiana y actúa como un puente entre el controlador y el calculador de distancia.
+In the `DistanceService` class, the service pattern is implemented. Contains the logic for calculating the Euclidean distance and acts as a bridge between the controller and the distance calculator.
 
-### Manejo de Errores (Error Handling)
+### Error Handling
 
-Se implementa un sólido manejo de errores utilizando las anotaciones de manejo de excepciones de Spring. Esto garantiza que las respuestas de error sean coherentes y útiles para los clientes de la API.
+Robust error handling is implemented using Spring's exception handling annotations. This ensures that error responses are consistent and useful to API clients.
 
-La clase `DistanceController` utiliza la anotación `@ExceptionHandler` para capturar y manejar excepciones, y devuelve respuestas de error detalladas utilizando la clase `ApiError`.
+The `DistanceController` class uses the `@ExceptionHandler` annotation to catch and handle exceptions, and returns detailed error responses using the `ApiError` class.
 
-## Estructura de Directorios
+## Directory structure
 ```
-src/
+origin/
 └── main/
-    └── java/
-        └── com/
-            └── example/
-                └── demo/
-                    ├── controller/
-                    │   └── DistanceController.java
-                    ├── service/
-                    │   ├── DistanceService.java
-                    │   └── EuclideanDistanceCalculator.java
-                    ├── model/
-                    │   ├── Point.java
-                    │   ├── DistanceRequest.java
-                    │   └── DistanceResponse.java
-                    ├── error/
-                    │   └── ApiError.java
-                    └── EuclideanDistanceSingletonApplication.java
+      └──java/
+          └──com/
+              └── example/
+                  └── demo/
+                      ├── controller/
+                      │ └── Distance controller.java
+                      ├── service/
+                      │ ├── DistanceService.java
+                      │ └── Euclidean Distance Calculator.java
+                      ├── model/
+                      │ ├── Point.java
+                      │ ├── DistanceRequest.java
+                      │ └── DistanceResponse.java
+                      ├── error/
+                      │ └── ApiError.java
+                      └── EuclideanDistanceSingletonApplication.java
 ```
 
-## Cómo Probar con Postman
+## How to test with Postman
 
-1. Asegúrate de que el proyecto esté en ejecución.
+1. Make sure the project is running.
 
-2. Abre Postman y crea una nueva solicitud POST.
+2. Open Postman and create a new POST request.
 
-3. Establece la URL de la solicitud a `http://localhost:8080/calculate-distances`.
+3. Set the request URL to `http://localhost:8080/calculate-distances`.
 
-4. Asegúrate de que los encabezados estén configurados correctamente:
-   - `Content-Type`: `application/json`
-   - `Accept`: `application/json`
+4. Make sure the headers are set correctly:
+     - `Content-type`: `application/json`
+     - `OK`: `application/json`
 
-5. En la pestaña "Body", selecciona "Raw" y elige "JSON (application/json)" como tipo de contenido.
+5. In the "Body" tab, select "Raw" and choose "JSON (application/json)" as the content type.
 
-6. Ingresa un cuerpo de solicitud JSON de ejemplo, por ejemplo:
-   ```json
-   {
-       "x1": 1,
-       "y1": 2,
-       "x2": 4,
-       "y2": 6
-   }
+6. Enter a sample JSON request body, for example:
+     ```json
+     {
+         "x1": 1,
+         "y1": 2,
+         "x2": 4,
+         "y2": 6
+     }
