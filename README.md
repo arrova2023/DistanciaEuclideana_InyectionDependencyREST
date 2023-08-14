@@ -62,7 +62,7 @@ origin/
 
 4. Make sure the headers are set correctly:
      - `Content-type`: `application/json`
-     - `OK`: `application/json`
+     - `Accept`: `application/json`
 
 5. In the "Body" tab, select "Raw" and choose "JSON (application/json)" as the content type.
 
