@@ -31,7 +31,7 @@ Se implementa un sólido manejo de errores utilizando las anotaciones de manejo 
 La clase `DistanceController` utiliza la anotación `@ExceptionHandler` para capturar y manejar excepciones, y devuelve respuestas de error detalladas utilizando la clase `ApiError`.
 
 ## Estructura de Directorios
-
+```
 src/
 └── main/
     └── java/
@@ -50,7 +50,7 @@ src/
                     ├── error/
                     │   └── ApiError.java
                     └── EuclideanDistanceSingletonApplication.java
-
+```
 
 ## Cómo Probar con Postman
 
